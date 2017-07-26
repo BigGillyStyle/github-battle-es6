@@ -48,7 +48,7 @@ function RepoGrid (props) {
 
 RepoGrid.propTypes = {
   repos: PropTypes.array.isRequired,
-}
+};
 
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
@@ -65,9 +65,11 @@ class Popular extends React.Component {
 
     this.updateLanguage = this.updateLanguage.bind(this);
   }
+
   componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage)
   }
+
   updateLanguage(lang) {
     this.setState(function () {
       return {
@@ -85,6 +87,7 @@ class Popular extends React.Component {
         });
       }.bind(this));
   }
+
   render() {
     return (
       <div>
