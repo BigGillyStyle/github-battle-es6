@@ -4,35 +4,31 @@
   "description": "Course work for Tyler McGinnis' React Fundamentals course",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "NODE_ENV='production' webpack -p",
-    "firebase-init": "firebase login && firebase init",
-    "deploy": "npm run build && firebase deploy"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "firebase-init": "./node_modules/.bin/firebase login && ./node_modules/.bin/firebase init",
+    "deploy": "npm run build && ./node_modules/.bin/firebase deploy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BigGillyStyle/github-battle.git"
+    "url": "git+https://github.com/BigGillyStyle/github-battle-es6.git"
   },
   "keywords": [
     "React"
   ],
   "author": "Andy Pickler",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
   "bugs": {
-    "url": "https://github.com/BigGillyStyle/github-battle/issues"
+    "url": "https://github.com/BigGillyStyle/github-battle-es6/issues"
   },
-  "homepage": "https://github.com/BigGillyStyle/github-battle#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-scripts": "1.0.11",
     "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
